@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts Bar Chart Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <style>
+        #main {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <script>
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var option = {
+            title: {
+                text: 'Weekly Sales Data'
+            },
+            tooltip: {},
+            xAxis: {
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {},
+            series: [{
+                name: 'Sales',
+                type: 'bar',
+                data: [120, 200, 150, 80, 70, 110, 130]
+            }]
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
